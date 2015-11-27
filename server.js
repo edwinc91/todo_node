@@ -1,0 +1,12 @@
+var express         = require('express'),
+    // PORT            = process.env.PORT || 3001,
+    server          = express(),
+    // MONGOURI        = process.env.MONGOLAB_URI || "mongodb://localhost:27017",
+    dbname          = "feddit",
+    mongoose        = require('mongoose'),
+    Schema          = mongoose.Schema,
+    ejs             = require('ejs'),
+    expressLayouts  = require('express-ejs-layouts'),
+    bodyParser      = require('body-parser'),
+    methodOverride  = require('method-override'),
+    session         = require('express-session');
