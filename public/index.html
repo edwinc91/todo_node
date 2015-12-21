@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="TodoApp">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-beta.1/angular.min.js" charset="utf-8"></script>
+    <script src="/js/app.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <h1>Todo App</h1>
+    <form
+      ng-controller="CreateController as createCtrl"
+      ng-submit="createCtrl.create()">
+      <input type="text" ng-model="createCtrl.value" />
+      <input type="submit" value="Create!" />
+
+      <ul>
+        <li ng-repeat="item in createCtrl.todos">
+          {{item.todo_value}}
+          <br/>
+          Created at: {{item.created}}
+          <input type="button" ng-click="createCtrl.delete(item._id)" value="Delete">
+        </li>
+      </ul>
+    </form>
+  </body>
+</html>
