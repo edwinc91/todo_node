@@ -21,15 +21,4 @@ app.controller('CreateController', ['$http', '$scope', function($http, $scope){
       controller.todos = data;
     });
   };
-  // this.patch = function() {
-  //   $http.patch('/items' + item.id, {
-  //     todo_value: this.value
-  //   }).success(function(data){
-  //     console.log(data);
-  //     controller.todos = data;
-  //   });
-  // };
-  // this.delete = function() {
-  //   $http.delete('/items')
-  // }
 }]);
